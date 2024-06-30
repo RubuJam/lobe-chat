@@ -9,6 +9,7 @@ export interface LobeUser {
   fullName?: string | null;
   id: string;
   latestName?: string | null;
+  publicMetadata?: Record<string, any>;
   username?: string | null;
 }
 

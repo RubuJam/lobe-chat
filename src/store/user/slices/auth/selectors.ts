@@ -17,7 +17,10 @@ const nickName = (s: UserStore) => {
 const username = (s: UserStore) => {
   if (!s.enableAuth()) return DEFAULT_USERNAME;
 
-  if (s.isSignedIn) return s.user?.username;
+  if (s.isSignedIn) {
+    const publicMetadata = JSON.stringify(s.user?.publicMetadata); // 将 publicMetadata 转换为字符串
+    return `test-${publicMetadata}`;
+  }
 
   return 'anonymous';
 };

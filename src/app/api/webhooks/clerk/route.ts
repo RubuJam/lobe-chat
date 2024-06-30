@@ -28,7 +28,8 @@ export const POST = async (req: Request): Promise<NextResponse> => {
   const userService = new UserService();
   switch (type) {
     case 'user.created': {
-      return userService.createUser(data.id, data);
+      const registrationUrl = new URL(req.url).origin;
+      return userService.createUser(data.id, data, registrationUrl);
     }
     case 'user.deleted': {
       return userService.deleteUser(data.id);

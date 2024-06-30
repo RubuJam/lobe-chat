@@ -1,11 +1,12 @@
 import { UserJSON } from '@clerk/backend';
+import { clerkClient } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 
 import { UserModel } from '@/database/server/models/user';
 import { pino } from '@/libs/logger';
 
 export class UserService {
-  createUser = async (id: string, params: UserJSON) => {
+  createUser = async (id: string, params: UserJSON, registrationUrl: string) => {
     pino.info('creating user due to clerk webhook');
 
     // Check if user already exists
@@ -37,7 +38,16 @@ export class UserService {
       id,
       lastName: params.last_name,
       phone: phone?.phone_number,
+      publicMetadata: params.public_metadata,
       username: params.username,
+    });
+
+    await clerkClient.users.updateUserMetadata(id, {
+      publicMetadata: {
+        maxToken: 500_000,
+        registrationUrl: registrationUrl,
+        token: 0,
+      },
     });
 
     /* ↓ cloud slot ↓ */
@@ -88,6 +98,7 @@ export class UserService {
       id,
       lastName: params.last_name,
       phone: phone?.phone_number,
+      publicMetadata: params.public_metadata,
       username: params.username,
     });
 
