@@ -10,7 +10,10 @@ import {
   enableNextAuth,
 } from '@/const/auth';
 import { AgentRuntimeError } from '@/libs/agent-runtime';
+import { useUserStore } from '@/store/user';
 import { ChatErrorType } from '@/types/fetch';
+
+// Import the UserStore
 
 export const getJWTPayload = async (token: string): Promise<JWTPayload> => {
   //如果是 HTTP 协议发起的请求，直接解析 token
@@ -43,6 +46,7 @@ interface CheckAuthParams {
   clerkAuth?: AuthObject;
   nextAuthAuthorized?: boolean;
 }
+
 /**
  * Check if the provided access code is valid, a user API key should be used or the OAuth 2 header is provided.
  *
@@ -59,9 +63,19 @@ export const checkAuthMethod = ({
 }: CheckAuthParams) => {
   // clerk auth handler
   if (enableClerk) {
-    // if there is no userId, means the use is not login, just throw error
+    const { user } = useUserStore.getState(); // Get the user from UserStore
+
+    // Check if publicMetadata contains specific content
+    if (
+      user?.publicMetadata?.registrationUrl &&
+      user.publicMetadata.registrationUrl.includes('https://oaknuts.me/')
+    ) {
+      throw AgentRuntimeError.createError(ChatErrorType.InvalidClerkUser);
+    }
+
+    // if there is no userId, means the user is not logged in, just throw error
     if (!clerkAuth?.userId) throw AgentRuntimeError.createError(ChatErrorType.InvalidClerkUser);
-    // if the user is login, just return
+    // if the user is logged in, just return
     else return;
   }
 
