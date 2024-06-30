@@ -48,8 +48,8 @@ const isLogin = (s: UserStore, signOut: () => void) => {
   if (!s.enableAuth()) return true;
 
   if (
-    !publicMetadata ||
-    (publicMetadata.registrationUrl && publicMetadata.registrationUrl.includes('oaknuts.me'))
+    publicMetadata?.registrationUrl &&
+    publicMetadata.registrationUrl.includes('https://oaknuts.me/')
   ) {
     signOut();
     throw new UserNotAllowLogIn();
