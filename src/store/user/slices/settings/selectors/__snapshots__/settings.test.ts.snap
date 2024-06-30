@@ -55,7 +55,7 @@ exports[`settingsSelectors > currentTTS > should merge DEFAULT_TTS_CONFIG and s.
     "ttsModel": "tts-1",
   },
   "sttAutoStop": false,
-  "sttServer": "openai",
+  "sttServer": "browser",
 }
 `;
 
