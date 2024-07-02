@@ -1,10 +1,18 @@
 import { glob } from 'glob';
 
+const inVercelProduction = process.env.VERCEL === '1' && process.env.VERCEL_ENV === 'production';
+
 const isVercelPreview = process.env.VERCEL === '1' && process.env.VERCEL_ENV !== 'production';
+
+const vercelProductionUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
 
 const vercelPreviewUrl = `https://${process.env.VERCEL_URL}`;
 
-const siteUrl = isVercelPreview ? vercelPreviewUrl : 'https://chat-preview.lobehub.com';
+const siteUrl = inVercelProduction
+  ? vercelProductionUrl
+  : isVercelPreview
+    ? vercelPreviewUrl
+    : 'https://edu.rubuark.live';
 
 /** @type {import('next-sitemap').IConfig} */
 const config = {
@@ -46,8 +54,8 @@ const config = {
 
     return paths;
   },
-  siteUrl,
   generateRobotsTxt: true,
+  siteUrl,
 };
 
 export default config;

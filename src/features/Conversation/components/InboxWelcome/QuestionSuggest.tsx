@@ -80,7 +80,7 @@ const QuestionSuggest = memo<{ mobile?: boolean }>(({ mobile }) => {
         </Link>
       </Flexbox>
       <Flexbox gap={8} horizontal wrap={'wrap'}>
-        {qa.slice(0, mobile ? 2 : 5).map((item) => {
+        {qa.slice(0, mobile ? 0 : 0).map((item) => {
           const text = t(`guide.qa.${item}` as any);
           return (
             <Flexbox

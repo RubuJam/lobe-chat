@@ -207,7 +207,7 @@
     "anonymousNickName": "Anonymous User",
     "billing": "Billing Management",
     "data": "Data Storage",
-    "defaultNickname": "Community User",
+    "defaultNickname": "Education User",
     "discord": "Community Support",
     "docs": "Documentation",
     "email": "Email Support",
@@ -215,7 +215,7 @@
     "help": "Help Center",
     "moveGuide": "The settings button has been moved here",
     "plans": "Subscription Plans",
-    "preview": "Preview",
+    "preview": "Education Version",
     "profile": "Account Management",
     "setting": "App Settings",
     "usages": "Usage Statistics"
