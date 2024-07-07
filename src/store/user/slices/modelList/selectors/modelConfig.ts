@@ -65,21 +65,23 @@ const openAIConfig = (s: UserStore) => currentLLMSettings(s).openai;
 const bedrockConfig = (s: UserStore) => currentLLMSettings(s).bedrock;
 const ollamaConfig = (s: UserStore) => currentLLMSettings(s).ollama;
 const azureConfig = (s: UserStore) => currentLLMSettings(s).azure;
+const qwenConfig = (s: UserStore) => currentLLMSettings(s).qwen;
 
 const isAzureEnabled = (s: UserStore) => currentLLMSettings(s).azure.enabled;
 
 export const modelConfigSelectors = {
   azureConfig,
   bedrockConfig,
-
   currentEditingCustomModelCard,
-  getCustomModelCard,
 
+  getCustomModelCard,
   isAutoFetchModelsEnabled,
+
   isAzureEnabled,
   isProviderEnabled,
   isProviderFetchOnClient,
-
   ollamaConfig,
+
   openAIConfig,
+  qwenConfig,
 };

@@ -3,8 +3,24 @@ import OpenAI from 'openai';
 import { ModelProvider } from '../types';
 import { LobeOpenAICompatibleFactory } from '../utils/openaiCompatibleFactory';
 
+export interface LobeQwenAIParams {
+  apiKey: string;
+  region?: string;
+}
+
+const getBaseURL = (region: string) => {
+  switch (region) {
+    case 'https://dashscope.aliyuncs.com/compatible-mode/v1': {
+      return 'https://dashscope.aliyuncs.com/compatible-mode/v1';
+    }
+    default: {
+      return 'https://dashscope-intl.aliyuncs.com/api/v1';
+    }
+  }
+};
+
 export const LobeQwenAI = LobeOpenAICompatibleFactory({
-  baseURL: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+  baseURL: getBaseURL({ region: 'Region' }.region),
   chatCompletion: {
     handlePayload: (payload) => {
       const top_p = payload.top_p;

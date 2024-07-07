@@ -36,6 +36,15 @@ export const getProviderAuthPayload = (provider: string) => {
       return { endpoint: config?.baseURL };
     }
 
+    case ModelProvider.Qwen: {
+      const config = keyVaultsConfigSelectors.qwenConfig(useUserStore.getState());
+
+      return {
+        apiKey: config?.apiKey,
+        region: config?.region,
+      };
+    }
+
     default: {
       const config = keyVaultsConfigSelectors.getVaultByProvider(provider as GlobalLLMProviderKey)(
         useUserStore.getState(),

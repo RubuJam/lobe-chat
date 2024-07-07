@@ -34,7 +34,6 @@ import {
   MoonshotProviderCard,
   OpenRouterProviderCard,
   PerplexityProviderCard,
-  QwenProviderCard,
   StepfunProviderCard,
   TogetherAIProviderCard,
   ZeroOneProviderCard,
@@ -46,6 +45,7 @@ import { useAzureProvider } from './Azure';
 import { useBedrockProvider } from './Bedrock';
 import { useOllamaProvider } from './Ollama';
 import { useOpenAIProvider } from './OpenAI';
+import { useQwenProvider } from './Qwen';
 
 const BASE_DOC_URL = 'https://lobehub.com/docs/usage/providers';
 
@@ -83,6 +83,7 @@ export const useProviderList = (): ProviderItem[] => {
   const ollamaProvider = useOllamaProvider();
   const openAIProvider = useOpenAIProvider();
   const bedrockProvider = useBedrockProvider();
+  const qwenProvider = useQwenProvider();
 
   return useMemo(
     () => [
@@ -128,7 +129,7 @@ export const useProviderList = (): ProviderItem[] => {
         title: <Together.Combine size={26} type={'color'} />,
       },
       {
-        ...QwenProviderCard,
+        ...qwenProvider,
         docUrl: urlJoin(BASE_DOC_URL, 'qwen'),
         title: <Tongyi.Combine extra={'千问'} size={26} type={'color'} />,
       },
@@ -175,9 +176,9 @@ export const useProviderList = (): ProviderItem[] => {
       {
         ...BaichuanProviderCard,
         docUrl: urlJoin(BASE_DOC_URL, 'baichuan'),
-        title: <Baichuan.Combine size={ 20 } type={ 'color' } />,
+        title: <Baichuan.Combine size={20} type={'color'} />,
       },
     ],
-    [azureProvider, ollamaProvider, ollamaProvider, bedrockProvider],
+    [azureProvider, ollamaProvider, ollamaProvider, bedrockProvider, qwenProvider],
   );
 };

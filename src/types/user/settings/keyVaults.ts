@@ -15,6 +15,11 @@ export interface AWSBedrockKeyVault {
   secretAccessKey?: string;
 }
 
+export interface QwenKeyVault {
+  apiKey?: string;
+  region?: string;
+}
+
 export interface UserKeyVaults {
   anthropic?: OpenAICompatibleKeyVault;
   azure?: AzureOpenAIKeyVault;
@@ -32,7 +37,7 @@ export interface UserKeyVaults {
   openrouter?: OpenAICompatibleKeyVault;
   password?: string;
   perplexity?: OpenAICompatibleKeyVault;
-  qwen?: OpenAICompatibleKeyVault;
+  qwen?: QwenKeyVault;
   stepfun?: OpenAICompatibleKeyVault;
   togetherai?: OpenAICompatibleKeyVault;
   zeroone?: OpenAICompatibleKeyVault;

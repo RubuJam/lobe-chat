@@ -159,11 +159,12 @@ const getLlmOptionsFromPayload = (provider: string, payload: JWTPayload) => {
       return { apiKey };
     }
     case ModelProvider.Qwen: {
-      const { QWEN_API_KEY } = getLLMConfig();
+      const { QWEN_API_KEY, QWEN_REGION } = getLLMConfig();
 
       const apiKey = apiKeyManager.pick(payload?.apiKey || QWEN_API_KEY);
+      const region = payload?.qwenRegion || QWEN_REGION;
 
-      return { apiKey };
+      return { apiKey, region };
     }
     case ModelProvider.Stepfun: {
       const { STEPFUN_API_KEY } = getLLMConfig();

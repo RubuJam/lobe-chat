@@ -128,6 +128,10 @@ export function initializeWithClientStore(provider: string, payload: any) {
       break;
     }
     case ModelProvider.Qwen: {
+      providerOptions = {
+        apiKey: providerAuthPayload?.apiKey,
+        region: providerAuthPayload?.region,
+      };
       break;
     }
     case ModelProvider.Anthropic: {

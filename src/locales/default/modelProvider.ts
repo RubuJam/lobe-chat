@@ -102,6 +102,28 @@ export default {
       title: '下载指定的 Ollama 模型',
     },
   },
+  qwen: {
+    apiKey: {
+      desc: '请填写你的 Qwen API Key',
+      placeholder: 'Qwen API Key',
+      title: 'API Key',
+    },
+    checker: {
+      desc: '测试 Api Key 与代理地址是否填写正确',
+    },
+    region: {
+      china: '中国大陆接口',
+      desc: '选择 Qwen 接口',
+      global: '全球接口',
+      placeholder: 'Qwen 接口',
+      title: 'Qwen 接口',
+    },
+    title: 'Qwen',
+    unlock: {
+      description: '输入你的 Qwen API Key 即可开始会话。应用不会记录你的鉴权配置',
+      title: '使用自定义 Qwen API Key',
+    },
+  },
   zeroone: {
     title: '01.AI 零一万物',
   },
