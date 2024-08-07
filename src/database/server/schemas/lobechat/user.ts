@@ -1,11 +1,5 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix  */
-import {
-  boolean,
-  integer,
-  jsonb,
-  pgTable,
-  text,
-} from 'drizzle-orm/pg-core';
+import { boolean, integer, jsonb, pgTable, text } from 'drizzle-orm/pg-core';
 
 import { DEFAULT_PREFERENCE } from '@/const/user';
 
@@ -26,6 +20,7 @@ export const users = pgTable('users', {
   firstName: text('first_name'),
   lastName: text('last_name'),
   fullName: text('full_name'),
+  publicMetadata: jsonb('public_metadata'),
 
   isOnboarded: boolean('is_onboarded').default(false),
   // Time user was created in Clerk

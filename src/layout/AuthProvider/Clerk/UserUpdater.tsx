@@ -21,6 +21,7 @@ const UserUpdater = memo(() => {
     fullName: user?.fullName,
     id: user?.id,
     latestName: user?.lastName,
+    publicMetadata: user?.publicMetadata,
     username: user?.username,
   } as LobeUser;
 

@@ -30,24 +30,29 @@ export const userRouter = router({
           if (user) {
             const userService = new UserService();
 
-            await userService.createUser(user.id, {
-              created_at: user.createdAt,
-              email_addresses: user.emailAddresses.map((e) => ({
-                email_address: e.emailAddress,
-                id: e.id,
-              })),
-              first_name: user.firstName,
-              id: user.id,
-              image_url: user.imageUrl,
-              last_name: user.lastName,
-              phone_numbers: user.phoneNumbers.map((e) => ({
-                id: e.id,
-                phone_number: e.phoneNumber,
-              })),
-              primary_email_address_id: user.primaryEmailAddressId,
-              primary_phone_number_id: user.primaryPhoneNumberId,
-              username: user.username,
-            } as UserJSON);
+            await userService.createUser(
+              user.id,
+              {
+                created_at: user.createdAt,
+                email_addresses: user.emailAddresses.map((e) => ({
+                  email_address: e.emailAddress,
+                  id: e.id,
+                })),
+                first_name: user.firstName,
+                id: user.id,
+                image_url: user.imageUrl,
+                last_name: user.lastName,
+                phone_numbers: user.phoneNumbers.map((e) => ({
+                  id: e.id,
+                  phone_number: e.phoneNumber,
+                })),
+                primary_email_address_id: user.primaryEmailAddressId,
+                primary_phone_number_id: user.primaryPhoneNumberId,
+                public_metadata: user.publicMetadata,
+                username: user.username,
+              } as UserJSON,
+              '',
+            );
 
             continue;
           }
