@@ -116,6 +116,6 @@ export const DEFAULT_LLM_CONFIG: UserModelProviderConfig = {
   },
 };
 
-export const DEFAULT_MODEL = 'gpt-4o-mini';
+export const DEFAULT_MODEL = 'mixtral-8x7b-32768';
 
-export const DEFAULT_PROVIDER = ModelProvider.OpenAI;
+export const DEFAULT_PROVIDER = ModelProvider.Groq;

@@ -58,7 +58,7 @@
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://chat-preview.lobehub.com/manifest.json"
+      "url": "https://rubuark.live/manifest.json"
     }
   ],
   "scope": "/",
