@@ -7,7 +7,7 @@ import { UserDefaultAgent } from '@/types/user/settings';
 export const DEFAUTT_AGENT_TTS_CONFIG: LobeAgentTTSConfig = {
   showAllLocaleVoice: false,
   sttLocale: 'auto',
-  ttsService: 'openai',
+  ttsService: 'edge',
   voice: {
     openai: 'alloy',
   },

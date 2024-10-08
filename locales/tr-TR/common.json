@@ -220,7 +220,7 @@
     "billing": "Fatura Yönetimi",
     "cloud": "{{name}}'i Deneyin",
     "data": "Veri Depolama",
-    "defaultNickname": "Topluluk Kullanıcısı",
+    "defaultNickname": "Eğitim Kullanıcısı",
     "discord": "Topluluk Destek",
     "docs": "Belgeler",
     "email": "E-posta Destek",
@@ -228,7 +228,7 @@
     "help": "Yardım Merkezi",
     "moveGuide": "Ayarlar düğmesini buraya taşıyın",
     "plans": "Planlar",
-    "preview": "Önizleme",
+    "preview": "Eğitim Sürümü",
     "profile": "Hesap Yönetimi",
     "setting": "Uygulama Ayarları",
     "usages": "Kullanım İstatistikleri"
