@@ -4,7 +4,7 @@ import { DEFAULT_INBOX_AVATAR, DEFAULT_USER_AVATAR } from '@/const/meta';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
-import { messageMapKey } from '@/store/chat/slices/message/utils';
+import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 import { featureFlagsSelectors } from '@/store/serverConfig';
 import { createServerConfigStore } from '@/store/serverConfig/store';
 import { useSessionStore } from '@/store/session';
@@ -75,9 +75,7 @@ const showInboxWelcome = (s: ChatStoreState): boolean => {
   if (!isInbox) return false;
 
   const data = currentChats(s);
-  const isBrandNewChat = data.length === 0;
-
-  return isBrandNewChat;
+  return data.length === 0;
 };
 
 // Custom message for new assistant initialization

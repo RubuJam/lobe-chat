@@ -60,13 +60,13 @@ const Qwen: ModelProviderCard = {
         '通义千问大规模视觉语言模型增强版。大幅提升细节识别能力和文字识别能力，支持超百万像素分辨率和任意长宽比规格的图像。',
       displayName: 'Qwen VL Plus',
       enabled: true,
-      id: 'qwen-vl-plus',
+      id: 'qwen-vl-plus-latest',
       pricing: {
         currency: 'CNY',
         input: 8,
         output: 8,
       },
-      tokens: 8000,
+      tokens: 32_000,
       vision: true,
     },
     {
@@ -74,7 +74,7 @@ const Qwen: ModelProviderCard = {
         '通义千问超大规模视觉语言模型。相比增强版，再次提升视觉推理能力和指令遵循能力，提供更高的视觉感知和认知水平。',
       displayName: 'Qwen VL Max',
       enabled: true,
-      id: 'qwen-vl-max',
+      id: 'qwen-vl-max-latest',
       pricing: {
         currency: 'CNY',
         input: 20,
@@ -115,6 +115,17 @@ const Qwen: ModelProviderCard = {
         currency: 'CNY',
         input: 2,
         output: 6,
+      },
+      tokens: 131_072,
+    },
+    {
+      description: '通义千问代码模型。',
+      displayName: 'Qwen Coder Plus',
+      id: 'qwen-coder-plus-latest',
+      pricing: {
+        currency: 'CNY',
+        input: 3.5,
+        output: 7,
       },
       tokens: 131_072,
     },
@@ -168,17 +179,6 @@ const Qwen: ModelProviderCard = {
     },
     {
       description: 'Qwen-Math 模型具有强大的数学解题能力。',
-      displayName: 'Qwen2.5 Math 1.5B',
-      id: 'qwen2.5-math-1.5b-instruct',
-      pricing: {
-        currency: 'CNY',
-        input: 0,
-        output: 0,
-      },
-      tokens: 4096,
-    },
-    {
-      description: 'Qwen-Math 模型具有强大的数学解题能力。',
       displayName: 'Qwen2.5 Math 7B',
       id: 'qwen2.5-math-7b-instruct',
       pricing: {
@@ -201,23 +201,23 @@ const Qwen: ModelProviderCard = {
     },
     {
       description: '通义千问代码模型开源版。',
-      displayName: 'Qwen2.5 Coder 1.5B',
-      id: 'qwen2.5-coder-1.5b-instruct',
-      pricing: {
-        currency: 'CNY',
-        input: 0,
-        output: 0,
-      },
-      tokens: 131_072,
-    },
-    {
-      description: '通义千问代码模型开源版。',
       displayName: 'Qwen2.5 Coder 7B',
       id: 'qwen2.5-coder-7b-instruct',
       pricing: {
         currency: 'CNY',
         input: 1,
         output: 2,
+      },
+      tokens: 131_072,
+    },
+    {
+      description: '通义千问代码模型开源版。',
+      displayName: 'Qwen2.5 Coder 32B',
+      id: 'qwen2.5-coder-32b-instruct',
+      pricing: {
+        currency: 'CNY',
+        input: 3.5,
+        output: 7,
       },
       tokens: 131_072,
     },
