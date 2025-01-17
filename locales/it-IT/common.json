@@ -287,7 +287,7 @@
     "billing": "Gestione fatturazione",
     "cloud": "Prova {{name}}",
     "data": "Archiviazione dati",
-    "defaultNickname": "Utente Community",
+    "defaultNickname": "Utente Educativo",
     "discord": "Supporto della community",
     "docs": "Documentazione",
     "email": "Supporto via email",
@@ -295,7 +295,7 @@
     "help": "Centro assistenza",
     "moveGuide": "Il pulsante delle impostazioni è stato spostato qui",
     "plans": "Piani di abbonamento",
-    "preview": "Anteprima",
+    "preview": "Versione Educativa",
     "profile": "Gestione account",
     "setting": "Impostazioni app",
     "usages": "Statistiche di utilizzo"

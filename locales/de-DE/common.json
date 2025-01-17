@@ -287,7 +287,7 @@
     "billing": "Abrechnung verwalten",
     "cloud": "Erleben Sie {{name}}",
     "data": "Daten speichern",
-    "defaultNickname": "Community User",
+    "defaultNickname": "Bildungsbenutzer",
     "discord": "Community-Support",
     "docs": "Dokumentation",
     "email": "E-Mail-Support",
@@ -295,7 +295,7 @@
     "help": "Hilfezentrum",
     "moveGuide": "Die Einstellungen wurden hierher verschoben.",
     "plans": "Abonnementpläne",
-    "preview": "Vorschau",
+    "preview": "Bildungsversion",
     "profile": "Kontoverwaltung",
     "setting": "App-Einstellungen",
     "usages": "Nutzungsstatistiken"

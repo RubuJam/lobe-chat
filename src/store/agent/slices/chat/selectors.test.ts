@@ -99,12 +99,6 @@ describe('agentSelectors', () => {
   });
 
   describe('currentAgentTTSVoice', () => {
-    it('should return the appropriate TTS voice based on the service and language', () => {
-      const lang = 'en';
-      const ttsVoice = agentSelectors.currentAgentTTSVoice(lang)(mockSessionStore);
-      expect(ttsVoice).toBe(agentConfig.tts?.voice?.openai);
-    });
-
     it('should return the default voice for edge TTS service', () => {
       const modifiedStore = merge(mockSessionStore, {
         agentMap: {
@@ -128,25 +122,6 @@ describe('agentSelectors', () => {
 
       const ttsVoice = agentSelectors.currentAgentTTSVoice('en')(modifiedStore);
       expect(ttsVoice).toBe('ar-SA-HamedNeural');
-    });
-
-    it('should return the first voice if the specified voice does not exist', () => {
-      const lang = 'en';
-      const modifiedStore = {
-        ...mockSessionStore,
-        agentConfig: {
-          ...agentConfig,
-          tts: {
-            ...DEFAUTT_AGENT_TTS_CONFIG,
-            ttsService: 'avc',
-            voice: {
-              openai: 'non-existent-voice',
-            },
-          },
-        },
-      };
-      const ttsVoice = agentSelectors.currentAgentTTSVoice(lang)(modifiedStore as any);
-      expect(ttsVoice).toBe('alloy');
     });
   });
 

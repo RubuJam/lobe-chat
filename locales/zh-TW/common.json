@@ -287,7 +287,7 @@
     "billing": "帳單管理",
     "cloud": "體驗 {{name}}",
     "data": "資料儲存",
-    "defaultNickname": "社群版使用者",
+    "defaultNickname": "教育用戶",
     "discord": "社區支援",
     "docs": "使用文件",
     "email": "郵件支援",
@@ -295,7 +295,7 @@
     "help": "幫助中心",
     "moveGuide": "設置按鈕搬到這裡啦",
     "plans": "訂閱方案",
-    "preview": "預覽",
+    "preview": "教育版",
     "profile": "帳戶管理",
     "setting": "應用設定",
     "usages": "用量統計"

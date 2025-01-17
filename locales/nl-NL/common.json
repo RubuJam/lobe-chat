@@ -287,7 +287,7 @@
     "billing": "facturatie",
     "cloud": "Ervaar {{name}}",
     "data": "gegevensopslag",
-    "defaultNickname": "communitygebruiker",
+    "defaultNickname": "Onderwijsgebruiker",
     "discord": "communityondersteuning",
     "docs": "gebruiksaanwijzing",
     "email": "e-mailondersteuning",
@@ -295,7 +295,7 @@
     "help": "helpcentrum",
     "moveGuide": "instellingen verplaatst naar hier",
     "plans": "abonnementen",
-    "preview": "voorbeeldversie",
+    "preview": "Onderwijsversie",
     "profile": "accountbeheer",
     "setting": "app-instellingen",
     "usages": "gebruiksstatistieken"

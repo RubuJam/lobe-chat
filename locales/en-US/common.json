@@ -287,7 +287,7 @@
     "billing": "Billing Management",
     "cloud": "Launch {{name}}",
     "data": "Data Storage",
-    "defaultNickname": "Community User",
+    "defaultNickname": "Education User",
     "discord": "Community Support",
     "docs": "Documentation",
     "email": "Email Support",
@@ -295,7 +295,7 @@
     "help": "Help Center",
     "moveGuide": "The settings button has been moved here",
     "plans": "Subscription Plans",
-    "preview": "Preview",
+    "preview": "Education Edition",
     "profile": "Account Management",
     "setting": "Settings",
     "usages": "Usage Statistics"

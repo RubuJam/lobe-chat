@@ -23,7 +23,7 @@ exports[`agentSelectors > defaultAgentConfig > should merge DEFAULT_AGENT_CONFIG
   "tts": {
     "showAllLocaleVoice": false,
     "sttLocale": "auto",
-    "ttsService": "openai",
+    "ttsService": "edge",
     "voice": {
       "openai": "alloy",
     },

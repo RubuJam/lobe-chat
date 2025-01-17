@@ -55,7 +55,7 @@ exports[`settingsSelectors > currentTTS > should merge DEFAULT_TTS_CONFIG and s.
     "ttsModel": "tts-1",
   },
   "sttAutoStop": false,
-  "sttServer": "openai",
+  "sttServer": "browser",
 }
 `;
 
@@ -90,7 +90,7 @@ exports[`settingsSelectors > defaultAgent > should merge DEFAULT_AGENT and s.set
     "tts": {
       "showAllLocaleVoice": false,
       "sttLocale": "auto",
-      "ttsService": "openai",
+      "ttsService": "edge",
       "voice": {
         "openai": "alloy",
       },

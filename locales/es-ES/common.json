@@ -287,7 +287,7 @@
     "billing": "Gestión de facturación",
     "cloud": "Prueba {{name}}",
     "data": "Almacenamiento de datos",
-    "defaultNickname": "Usuario de la comunidad",
+    "defaultNickname": "Usuario Educativo",
     "discord": "Soporte de la comunidad",
     "docs": "Documentación de uso",
     "email": "Soporte por correo electrónico",
@@ -295,7 +295,7 @@
     "help": "Centro de ayuda",
     "moveGuide": "El botón de configuración se ha movido aquí",
     "plans": "Planes de suscripción",
-    "preview": "Vista previa",
+    "preview": "Versión Educativa",
     "profile": "Gestión de cuenta",
     "setting": "Configuración de la aplicación",
     "usages": "Estadísticas de uso"
